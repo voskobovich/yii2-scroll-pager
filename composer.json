@@ -1,0 +1,32 @@
+{
+  "name": "voskobovich/yii2-scroll-pager",
+  "description": "Infinite scroll pager for Yii2",
+  "keywords": [
+    "yii2",
+    "widgets"
+  ],
+  "homepage": "https://github.com/voskobovich/yii2-scroll-pager",
+  "type": "yii2-widget",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/voskobovich/yii2-scroll-pager/issues",
+    "source": "https://github.com/voskobovich/yii2-scroll-pager"
+  },
+  "authors": [
+    {
+      "name": "Vitaly Voskobovich",
+      "email": "vitaly@voskobovich.com",
+      "homepage": "http://voskobovich.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "voskobovich\\widgets\\scrollPager\\": ""
+    }
+  }
+}
