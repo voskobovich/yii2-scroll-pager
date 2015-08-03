@@ -20,12 +20,6 @@ class Pager extends LinkPager
     public $itemsContainer = '.list-view';
 
     /**
-     * Pjax container
-     * @var string
-     */
-    public $pjaxContainer = '#scrollPagerPjaxContainer';
-
-    /**
      * JS plugin options
      * @var array
      */
@@ -44,16 +38,15 @@ class Pager extends LinkPager
     {
         parent::init();
 
-        $this->nextPageLabel = false;
-        $this->prevPageLabel = false;
-
-        $this->pluginOptions = ArrayHelper::merge($this->pluginOptions, [
+        $this->pluginOptions = ArrayHelper::merge([
             'wrapper' => '.list-view',
             'pagination' => '.pagination',
             'next' => '.pagination .next a:first',
             'bufferPx' => 40,
-        ]);
-        $this->pluginOptions['pjax']['container'] = $this->pjaxContainer;
+            'pjax' => [
+                'container' => '#scrollPagerPjaxContainer'
+            ]
+        ], $this->pluginOptions);
 
         PagerAsset::register($this->view);
 
