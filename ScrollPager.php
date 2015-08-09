@@ -1,6 +1,6 @@
 <?php
 
-namespace voskobovich\widgets\scrollPager;
+namespace voskobovich\widgets;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
@@ -8,10 +8,10 @@ use yii\widgets\LinkPager;
 
 
 /**
- * Class Pager
- * @package voskobovich\widgets\scrollPager
+ * Class ScrollPager
+ * @package voskobovich\widgets
  */
-class Pager extends LinkPager
+class ScrollPager extends LinkPager
 {
     /**
      * Items container
@@ -48,7 +48,7 @@ class Pager extends LinkPager
             ]
         ], $this->pluginOptions);
 
-        PagerAsset::register($this->view);
+        ScrollPagerAsset::register($this->view);
 
         $pluginOptions = Json::encode($this->pluginOptions);
         $this->view->registerJs("$('{$this->itemsContainer}').scrollPager({$pluginOptions});");

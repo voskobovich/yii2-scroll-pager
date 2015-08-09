@@ -1,15 +1,15 @@
 <?php
 
-namespace voskobovich\widgets\scrollPager;
+namespace voskobovich\widgets;
 
 use yii\web\AssetBundle;
 
 
 /**
- * Class PagerAsset
- * @package voskobovich\widgets\scrollPager
+ * Class ScrollPagerAsset
+ * @package voskobovich\widgets
  */
-class PagerAsset extends AssetBundle
+class ScrollPagerAsset extends AssetBundle
 {
     /**
      * @inheritdoc
