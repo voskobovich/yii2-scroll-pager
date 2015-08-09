@@ -1,4 +1,4 @@
-Yii2 jScroll Pager
+Yii2 Scroll Pager
 ================================
 
 Installation
