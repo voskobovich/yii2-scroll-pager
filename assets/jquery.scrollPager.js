@@ -77,7 +77,7 @@
         retrieve: function () {
             if (!options.state.isPaused && !options.state.isLoadingNextPage) {
                 options.state.isLoadingNextPage = true;
-                var link = $(options.next);
+                var link = $(options.wrapper).find(options.next);
                 if (link.length) {
                     var href = link.attr('href');
                     methods.showLoadingText();
