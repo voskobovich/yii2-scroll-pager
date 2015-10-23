@@ -94,7 +94,8 @@
                             $(options.wrapper).find(options.pagination).html(options.state.tempHTML.find(options.pagination).html());
 
                             // Append items
-                            object.find(options.item).last().after(options.state.tempHTML.find(options.item).hide().fadeIn('slow'));
+                            var items = options.state.tempHTML.find('.item');
+                            object.find(options.item).last().after(items.hide().fadeIn('slow'));
 
                             // JS Init
                             if (options.appendJs) {
@@ -103,7 +104,7 @@
 
                             options.state.isLoadingNextPage = false;
                             methods.hideLoadingText();
-                            object.trigger('scrollPager:afterRetrieve');
+                            object.trigger('scrollPager:afterRetrieve', {newElements: items});
                         }
                     });
                 } else {
