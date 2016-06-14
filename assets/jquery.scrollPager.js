@@ -95,7 +95,7 @@
                             $(options.wrapper).find(options.pagination).html(options.state.tempHTML.find(options.pagination).html());
 
                             // Append items
-                            var items = options.state.tempHTML.find('.item');
+                            var items = options.state.tempHTML.find(options.item);
                             object.find(options.item).last().after(items);
                             if (options.animate) {
                                 items.hide().fadeIn('slow');
